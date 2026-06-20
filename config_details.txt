@@ -1,0 +1,34 @@
+bootstrap.servers=pkc-921jm.us-east-2.aws.confluent.cloud:9092
+key.converter=org.apache.kafka.connect.storage.StringConverter
+value.converter=io.confluent.connect.avro.AvroConverter
+
+ssl.endpoint.identification.algorithm=https
+security.protocol=SASL_SSL
+sasl.mechanism=PLAIN
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="FPZDFHY44L5CRCIM" password="cflt/JB5fJ7/MVGqseBaEnufG8NNg6uGVzThyvWqRJ6SCBf619NqMoqy+pJ5ZdXA";
+request.timeout.ms=20000
+retry.backoff.ms=500
+
+producer.bootstrap.servers=pkc-921jm.us-east-2.aws.confluent.cloud:9092
+producer.ssl.endpoint.identification.algorithm=https
+producer.security.protocol=SASL_SSL
+producer.sasl.mechanism=PLAIN
+producer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="FPZDFHY44L5CRCIM" password="cflt/JB5fJ7/MVGqseBaEnufG8NNg6uGVzThyvWqRJ6SCBf619NqMoqy+pJ5ZdXA";
+producer.request.timeout.ms=20000
+producer.retry.backoff.ms=500
+
+consumer.bootstrap.servers=pkc-921jm.us-east-2.aws.confluent.cloud:9092
+consumer.ssl.endpoint.identification.algorithm=https
+consumer.security.protocol=SASL_SSL
+consumer.sasl.mechanism=PLAIN
+consumer.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="FPZDFHY44L5CRCIM" password="cflt/JB5fJ7/MVGqseBaEnufG8NNg6uGVzThyvWqRJ6SCBf619NqMoqy+pJ5ZdXA";
+consumer.request.timeout.ms=20000
+consumer.retry.backoff.ms=500
+
+offset.flush.interval.ms=10000
+offset.storage.file.filename=/tmp/connect.offsets
+
+# Required connection configs for Confluent Cloud Schema Registry
+value.converter.basic.auth.credentials.source=USER_INFO
+value.converter.schema.registry.basic.auth.user.info=7JPIYRRZDT5LONFB:cfltZEbZpqiG35Fkn8hncks/FdaFVu3bqSRtOP18ZhEJb5B2OmVmN1jrv3FsRdug
+value.converter.schema.registry.url=https://psrc-zgrkm29.us-east-2.aws.confluent.cloud
